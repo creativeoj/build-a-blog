@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+			.error {
+				color: red;
+			}
+			.blog_entry { 
+				
+				text-align: center;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<nav>
+			<a href = '/blog'>Main Blog Page</a>  
+			&nbsp;&nbsp;&nbsp;&nbsp;<a href = '/newpost'>Add a Blog Entry</a>
+		</nav>
+
+		<br/>
+		<br/>
+
+		{% block content %}
+		{% endblock %}
+		
+	</body>
+</html>
