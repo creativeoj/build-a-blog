@@ -71,26 +71,10 @@ def add_blog():
         db.session.add(new_post)
         db.session.commit()
 
-        #temp = Blog.query.all()
-        #max_id = len(temp)
+    
         return redirect('/blog?id=' +str(new_post.id))
 
-    if blog_title  and  blog_content :
-        return redirect(url_for('blog', id = max_id))
-        #return redirect(url_for('blog', id = max_id))
-
-#@app.route('/blog?id=<post_id>')
-#def nim(post_id):
- #   if request.args: 
-  #      print(request.args)
-
-        #post_id =='':
-   #     posts = Blog.query.all()
-    #    return render_template('blog.html', title = "haha", posts=post)
-    #else:
-     #   added_blog = Blog.query.get(post_id)
-      #  return render_template('individual.html', title = added_blog.title, blog_content=added_blog.content)
-
+    
 
 if __name__ == '__main__':
     app.run()   
